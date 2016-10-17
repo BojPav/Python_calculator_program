@@ -1,5 +1,4 @@
 from Tkinter import *
-from tkinter import ttk
 
 
 class Calculator:
@@ -56,32 +55,26 @@ class Calculator:
 
         root.resizable(width=False, height=False)
 
-        root.geometry('{}x{}'.format(250, 300))
+        root.geometry('{}x{}'.format(260, 250))
 
-        style = ttk.Style()
-
-        style.configure("TButton", font="Serif 15", padding=10,)
-
-        style.configure("TEntry", font="Serif 18", padding=10)
-
-        self.stevilka_vpis = ttk.Entry(root, textvariable=self.vpis_vrednost, width=37)
+        self.stevilka_vpis = Entry(root,font="Serif 18", textvariable=self.vpis_vrednost, width=20)
 
         self.stevilka_vpis.grid(row=0, columnspan=4)
 
-        self.gumb_ena = ttk.Button(root, text="1", width=5, command=lambda: self.gumb_press('1')).grid(row=1, column=0)
-        self.gumb_dva = ttk.Button(root, text="2", width=5, command=lambda: self.gumb_press('2')).grid(row=1, column=1)
-        self.gumb_tri = ttk.Button(root, text="3", width=5, command=lambda: self.gumb_press('3')).grid(row=1, column=2)
-        self.gumb_stiri = ttk.Button(root, text="4", width=5, command=lambda: self.gumb_press('4')).grid(row=2, column=0)
-        self.gumb_pet = ttk.Button(root, text="5", width=5, command=lambda: self.gumb_press('5')).grid(row=2, column=1)
-        self.gumb_sest = ttk.Button(root, text="6", width=5, command=lambda: self.gumb_press('6')).grid(row=2, column=2)
-        self.gumb_sedem = ttk.Button(root, text="7", width=5, command=lambda: self.gumb_press('7')).grid(row=3, column=0)
-        self.gumb_osem = ttk.Button(root, text="8", width=5, command=lambda: self.gumb_press('8')).grid(row=3, column=1)
-        self.gumb_devet = ttk.Button(root, text="9", width=5, command=lambda: self.gumb_press('9')).grid(row=3, column=2)
-        self.gumb_nula = ttk.Button(root, text="0", width=5, command=lambda: self.gumb_press('0')).grid(row=4, column=1)
+        self.gumb_ena = Button(root, text="1", width=10, command=lambda: self.gumb_press('1')).grid(row=1, column=0)
+        self.gumb_dva = Button(root, text="2", width=10, command=lambda: self.gumb_press('2')).grid(row=1, column=1)
+        self.gumb_tri = Button(root, text="3", width=10, command=lambda: self.gumb_press('3')).grid(row=1, column=2)
+        self.gumb_stiri = Button(root, text="4", width=10, command=lambda: self.gumb_press('4')).grid(row=2, column=0)
+        self.gumb_pet = Button(root, text="5", width=10, command=lambda: self.gumb_press('5')).grid(row=2, column=1)
+        self.gumb_sest = Button(root, text="6", width=10, command=lambda: self.gumb_press('6')).grid(row=2, column=2)
+        self.gumb_sedem = Button(root, text="7", width=10, command=lambda: self.gumb_press('7')).grid(row=3, column=0)
+        self.gumb_osem = Button(root, text="8", width=10, command=lambda: self.gumb_press('8')).grid(row=3, column=1)
+        self.gumb_devet = Button(root, text="9", width=10, command=lambda: self.gumb_press('9')).grid(row=3, column=2)
+        self.gumb_nula = Button(root, text="0", width=10, command=lambda: self.gumb_press('0')).grid(row=4, column=1)
 
-        self.gumb_plus = ttk.Button(root, text="+", width=5, command=lambda: self.math_gumb_press('+')).grid(row=5, column=0)
-        self.gumb_minus = ttk.Button(root, text="-", width=5, command=lambda: self.math_gumb_press('-')).grid(row=5, column=1)
-        self.gumb_enako = ttk.Button(root, text="=", width=5, command=lambda: self.enako_gumb_press('=')).grid(row=5, column=2)
+        self.gumb_plus = Button(root, text="+", width=10, command=lambda: self.math_gumb_press('+')).grid(row=5, column=0)
+        self.gumb_minus = Button(root, text="-", width=10, command=lambda: self.math_gumb_press('-')).grid(row=5, column=1)
+        self.gumb_enako = Button(root, text="=", width=10, command=lambda: self.enako_gumb_press('=')).grid(row=5, column=2)
 
 
 root = Tk()
